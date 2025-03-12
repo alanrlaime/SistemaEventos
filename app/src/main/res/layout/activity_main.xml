@@ -5,20 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    android:background="#4B9530"
+    android:background="#00000"
     tools:context=".MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#B31010"
+        android:background="#202020"
         android:fitsSystemWindows="true">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="183dp">
 
         </com.google.android.material.appbar.MaterialToolbar>
 
@@ -40,7 +40,7 @@
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="197dp"
         android:layout_gravity="center"
         android:orientation="vertical"
         android:padding="16dp">
@@ -49,26 +49,27 @@
             android:id="@+id/textViewOutput"
             android:layout_width="match_parent"
             android:layout_height="49dp"
+            android:layout_gravity="start"
             android:layout_marginTop="16dp"
             android:textSize="18sp" />
 
     </FrameLayout>
+
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gatos"
+        app:layout_anchor="@+id/frameLayout"
+        app:layout_anchorGravity="top|center" />
 
     <EditText
         android:id="@+id/editTextInput"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:hint="Escribe tu nombre"
-        app:layout_anchor="@+id/frameLayout"
-        app:layout_anchorGravity="bottom|center" />
-
-    <Button
-        android:id="@+id/buttonSubmit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Enviar"
-        app:layout_anchor="@+id/frameLayout"
-        app:layout_anchorGravity="top|center" />
+        app:layout_anchor="@+id/buttonSubmit"
+        app:layout_anchorGravity="center" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
